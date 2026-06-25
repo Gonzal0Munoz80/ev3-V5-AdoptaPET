@@ -19,3 +19,8 @@ crea src/components/FiltroEspecia.jsx con botones o un selector para filtrar esp
 
 
 Me fue util para hacer el filtro seguro usando el useState
+
+Etapa 5 destacar las adopciones urgentes
+destacar las adopciones urgentes resalta visualmente los elemtos cona dopcion urgente: true por ejemplo una etiqueta Urgente o borde distinto agregar un contador que muetre cuantas mascotas tienen en adopcion urgente verifica que toda la app corre sine rrores en consola
+
+Me fue util al poner las adopciones urgentes 

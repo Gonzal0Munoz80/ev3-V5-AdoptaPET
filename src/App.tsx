@@ -1,90 +1,61 @@
+import { useState } from 'react'
+import ListaMascotas from './components/ListaMascotas'
+import FiltroEspecia from './components/FiltroEspecia'
+import { mascotas } from './data/mascotas'
 import './App.css'
 
 function App() {
+  const [filtroEspecie, setFiltroEspecie] = useState('Todas')
+  const [busqueda, setBusqueda] = useState('')
+
+  const handleAdoptar = (mascota: any) => {
+    alert(`¡Gracias por querer adoptar a ${mascota.nombre}! Te contactaremos pronto.`)
+  }
+
+  // Aplicar filtros al array de mascotas
+  const mascotasFiltradas = mascotas.filter((mascota) => {
+    // Filtro por especie
+    const cumpleFiltroEspecie = filtroEspecie === 'Todas' || mascota.especie === filtroEspecie
+
+    // Filtro por búsqueda (nombre)
+    const cumpleBusqueda = mascota.nombre.toLowerCase().includes(busqueda.toLowerCase())
+
+    return cumpleFiltroEspecie && cumpleBusqueda
+  })
+
   return (
     <div className="app">
       <header>
-        <h1>Adopta Mascota</h1>
-        <p>Encuentra tu nuevo compañero</p>
+        <h1>🐾 Adopta Mascota</h1>
+        <p>Encuentra tu nuevo compañero feliz</p>
       </header>
       
       <main>
-        {/* Contenido principal aquí */}
+        <FiltroEspecia 
+          filtroActual={filtroEspecie}
+          onCambiarFiltro={setFiltroEspecie}
+          busqueda={busqueda}
+          onCambiarBusqueda={setBusqueda}
+        />
+
+        {mascotasFiltradas.length === 0 ? (
+          <div className="sin-resultados">
+            <div className="icono-vacio">😢</div>
+            <h3>No hay mascotas que coincidan</h3>
+            <p>Intenta ajustar los filtros de búsqueda</p>
+          </div>
+        ) : (
+          <ListaMascotas 
+            mascotas={mascotasFiltradas}
+            onAdoptar={handleAdoptar}
+          />
+        )}
       </main>
       
       <footer>
-        <p>&copy; 2024 Adopta Mascota. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Adopta Mascota. Todos los derechos reservados. 🐾</p>
       </footer>
     </div>
-  )
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
   )
 }
 

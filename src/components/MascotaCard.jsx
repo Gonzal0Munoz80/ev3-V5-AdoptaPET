@@ -19,7 +19,7 @@ function MascotaCard({ mascota, onAdoptar }) {
   const especieStyle = getEspecieStyle(mascota.especie);
 
   return (
-    <div className={`mascota-card ${especieStyle.clase}`}>
+    <div className={`mascota-card ${especieStyle.clase} ${mascota.adopcionUrgente ? 'urgente' : ''}`}>
       {mascota.adopcionUrgente && (
         <div className="urgente-badge">⚠️ ¡ADOPCIÓN URGENTE!</div>
       )}

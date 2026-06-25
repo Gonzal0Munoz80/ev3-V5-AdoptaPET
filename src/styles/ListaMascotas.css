@@ -50,6 +50,18 @@
 .stat-item.urgente {
   border-left-color: #ff4444;
   background: linear-gradient(135deg, #ffe5e5 0%, #ffcccc 100%);
+  border: 2px solid #ff4444;
+  box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.1);
+  animation: destello 2s ease-in-out infinite;
+}
+
+@keyframes destello {
+  0%, 100% { 
+    background: linear-gradient(135deg, #ffe5e5 0%, #ffcccc 100%);
+  }
+  50% { 
+    background: linear-gradient(135deg, #ffcccc 0%, #ffb3b3 100%);
+  }
 }
 
 .stat-label {

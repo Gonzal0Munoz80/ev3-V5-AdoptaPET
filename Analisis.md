@@ -28,7 +28,7 @@ App para listar, ver detalles y adoptar mascotas. Datos dinámicos e interfaz in
 
 ### 2. Props vs Estado
 
-**Props**: Datos del padre
+Props: Datos 
 ```jsx
 function CardMascota({ mascota }) {
   return <h2>{mascota.nombre}</h2>;
@@ -68,15 +68,15 @@ const [mostrarModal, setMostrarModal] = useState(false);
 // El componente controla estos datos
 ```
 
-**Resumen**: Props vienen de afuera (lectura), Estado es interno (lectura + escritura).
+Resumen: Props vienen de afuera (lectura), Estado es interno (lectura + escritura).
 
 ---
 
 ## Conclusión
 
 Estos elementos de React forman el núcleo de una aplicación funcional y mantenible. Su combinación permite:
-- ✅ Código modular y reutilizable
-- ✅ Aplicación reactiva que responde a cambios
-- ✅ Buena experiencia de usuario
-- ✅ Facilidad para agregar nuevas funcionalidades
-- ✅ Mejor rendimiento y debugging
+ Código modular y reutilizable
+ Aplicación reactiva que responde a cambios
+Buena experiencia de usuario
+ Facilidad para agregar nuevas funcionalidades
+ Mejor rendimiento y debugging
