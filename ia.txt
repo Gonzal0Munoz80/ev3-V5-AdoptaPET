@@ -6,7 +6,7 @@ Cargue los datos de Mascotas.js
 Etapa 2 Componente Mascota Card
 
 
-
+Cree el componete Mascota card con ia y use la herramienta para dessarollar el contenido
 
 Etapa 3 lista de mascotas Crear src/components/ListaMascotas.jsx que reciba el array de mascotas por props recoore el array con .map() y renderiza un MascotaCard por cada mascota asigana coorectamente la prop key usando el id de cada elemento(no uses el indece del array) en app.jsx renderiza Lsita de mascotas pasandole los datos importados
 
