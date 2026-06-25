@@ -1,0 +1,122 @@
+.lista-mascotas {
+  width: 100%;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo-seccion h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.contador {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.contador strong {
+  color: #667eea;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.stat-item.urgente {
+  border-left-color: #ff4444;
+  background: linear-gradient(135deg, #ffe5e5 0%, #ffcccc 100%);
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.stat-valor {
+  font-size: 28px;
+  font-weight: 800;
+  color: #667eea;
+}
+
+.stat-item.urgente .stat-valor {
+  color: #ff4444;
+}
+
+.grid-mascotas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1024px) {
+  .grid-mascotas {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-seccion h2 {
+    font-size: 24px;
+  }
+
+  .grid-mascotas {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-seccion h2 {
+    font-size: 20px;
+  }
+
+  .grid-mascotas {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .stats-container {
+    padding: 12px;
+  }
+}
