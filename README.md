@@ -1,32 +1,38 @@
-# React + TypeScript + Vite
+# Adopta Pet
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Autor: Gonzalo Muñoz
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Adopta Pet es una aplicación web creada con React y Vite para mostrar mascotas en adopción. Permite filtrar por especie, buscar por nombre y ver detalles de cada mascota, ayudando a conectar adoptantes con animales que necesitan un hogar.
 
-## React Compiler
+## Ejecución local
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Abre una terminal en la carpeta del proyecto.
+2. Instala dependencias:
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+3. Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+4. Abre el navegador en la dirección que indique Vite, normalmente:
+
+```text
+http://localhost:5173
+```
+
+## Uso de inteligencia artificial y GitHub
+
+- Este proyecto fue asistido en parte con herramientas de IA para mejorar la documentación y resolver problemas de dependencias.
+- El código se gestiona en GitHub y se recomienda usar control de versiones para organizar cambios, colaborar y mantener historial de desarrollo.
+
+## Notas
+
+- Si el proyecto reporta dependencias faltantes, ejecuta `npm install` nuevamente.
+- La aplicación está pensada como un prototipo de catálogo de adopción de mascotas y puede expandirse con más funcionalidades como formularios de adopción y administración de usuarios.
