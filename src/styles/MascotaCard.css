@@ -1,0 +1,261 @@
+.mascota-card {
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mascota-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos por especie */
+.mascota-card.perro {
+  border-left: 5px solid #D4A574;
+}
+
+.mascota-card.perro:hover {
+  border-left-color: #A0734D;
+}
+
+.mascota-card.gato {
+  border-left: 5px solid #FF6B9D;
+}
+
+.mascota-card.gato:hover {
+  border-left-color: #E94C7A;
+}
+
+.mascota-card.otro {
+  border-left: 5px solid #9B59B6;
+}
+
+.mascota-card.otro:hover {
+  border-left-color: #7D3C98;
+}
+
+.urgente-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.card-header {
+  padding: 16px;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header.perro {
+  background: rgba(212, 165, 116, 0.1);
+}
+
+.card-header.gato {
+  background: rgba(255, 107, 157, 0.1);
+}
+
+.card-header.otro {
+  background: rgba(155, 89, 182, 0.1);
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-especie {
+  font-size: 28px;
+}
+
+.mascota-nombre {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+  font-weight: 700;
+}
+
+.especie-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.especie-badge.perro {
+  background: #D4A574;
+  color: white;
+}
+
+.especie-badge.gato {
+  background: #FF6B9D;
+  color: white;
+}
+
+.especie-badge.otro {
+  background: #9B59B6;
+  color: white;
+}
+
+.card-body {
+  flex: 1;
+  padding: 16px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item .label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.info-item .valor {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.descripcion {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin: 14px 0;
+  padding: 12px;
+  background: #f5f5f5;
+  border-left: 3px solid #ddd;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+.caracteristicas {
+  margin-top: 16px;
+}
+
+.caracteristicas strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #333;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  padding: 5px 11px;
+  border-radius: 14px;
+  font-size: 12px;
+  border: 1.5px solid;
+  background: white;
+  font-weight: 500;
+}
+
+.tag.perro {
+  border-color: #D4A574;
+  color: #A0734D;
+}
+
+.tag.gato {
+  border-color: #FF6B9D;
+  color: #E94C7A;
+}
+
+.tag.otro {
+  border-color: #9B59B6;
+  color: #7D3C98;
+}
+
+.card-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-adoptar {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-adoptar.perro {
+  background: linear-gradient(135deg, #D4A574 0%, #A0734D 100%);
+  color: white;
+}
+
+.btn-adoptar.perro:hover {
+  background: linear-gradient(135deg, #A0734D 0%, #7a5436 100%);
+  transform: scale(1.02);
+}
+
+.btn-adoptar.gato {
+  background: linear-gradient(135deg, #FF6B9D 0%, #E94C7A 100%);
+  color: white;
+}
+
+.btn-adoptar.gato:hover {
+  background: linear-gradient(135deg, #E94C7A 0%, #D13361 100%);
+  transform: scale(1.02);
+}
+
+.btn-adoptar.otro {
+  background: linear-gradient(135deg, #9B59B6 0%, #7D3C98 100%);
+  color: white;
+}
+
+.btn-adoptar.otro:hover {
+  background: linear-gradient(135deg, #7D3C98 0%, #5E2E75 100%);
+  transform: scale(1.02);
+}
+
+.btn-adoptar:active {
+  transform: scale(0.98);
+}
